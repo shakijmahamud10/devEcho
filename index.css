@@ -1,0 +1,146 @@
+/* devEcho brand overrides */
+
+/* additional primary shade overrides to match brand tints */
+.bg-primary-50 {
+    background-color: #fff9ec !important;
+}
+
+.bg-primary-400 {
+    background-color: #ffd93b !important;
+}
+
+.bg-primary-700 {
+    background-color: #c65a26 !important;
+}
+
+.text-primary-400 {
+    color: #ffd93b !important;
+}
+
+.text-primary-700 {
+    color: #c65a26 !important;
+}
+
+:root {
+    --devecho-text: #333333;
+    --devecho-yellow: #f8cb46;
+    --devecho-orange: #eb6f2e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--devecho-text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure Tailwind utilities using primary colors reflect the devEcho palette */
+.bg-primary-500 {
+    background-color: var(--devecho-yellow) !important;
+}
+
+.bg-primary-600 {
+    background-color: var(--devecho-orange) !important;
+}
+
+.text-primary-500 {
+    color: var(--devecho-yellow) !important;
+}
+
+.text-primary-600 {
+    color: var(--devecho-orange) !important;
+}
+
+.ring-primary-500 {
+    box-shadow: 0 0 0 3px rgba(248, 203, 70, 0.12) !important;
+}
+
+/* Fallback shadow override for common shadow utility used in project */
+.shadow-primary-500\/25,
+.shadow-primary-600\/25 {
+    box-shadow: 0 10px 15px -3px rgba(235, 111, 46, 0.1), 0 4px 6px -2px rgba(235, 111, 46, 0.05) !important;
+}
+
+/* devEcho three-color gradient for text and backgrounds */
+.devecho-gradient-text {
+    background: linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+.devecho-gradient-bg {
+    background: linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%);
+}
+
+/* devEcho gradient hover border effect with border-radius support */
+.hover\:devecho-gradient-border:hover {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%) border-box;
+    border: 1px solid transparent;
+}
+
+/* Dark mode variant for hover gradient border */
+.dark .hover\:devecho-gradient-border:hover {
+    background: linear-gradient(#1f2937, #1f2937) padding-box,
+        linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%) border-box;
+    border: 1px solid transparent;
+}
+
+/* Alternative approach using CSS variables for better dark mode support */
+@media (prefers-color-scheme: dark) {
+    .hover\:devecho-gradient-border:hover {
+        background: linear-gradient(#1f2937, #1f2937) padding-box,
+            linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%) border-box !important;
+        border: 1px solid transparent !important;
+    }
+}
+
+
+/* Override default hover border colors with gradient */
+.group:hover .group-hover\:devecho-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #333333 0%, #eb6f2e 50%, #f8cb46 100%) border-box;
+    border: 1px solid transparent;
+}
+
+/* Modern Utilities */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-panel {
+    background: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
