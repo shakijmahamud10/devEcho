@@ -9,6 +9,9 @@ export default defineConfig(({ mode }) => {
 
     // base: '/devEcho/', removed for dual deployment support
 
+    build: {
+      chunkSizeWarningLimit: 1000, // Increase limit to 1000 kB to suppress warnings
+    },
 
     server: {
       port: 3000,
