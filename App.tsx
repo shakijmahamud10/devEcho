@@ -47,7 +47,7 @@ const App: React.FC = () => {
       {isLoading ? (
         <Preloader />
       ) : (
-        <Router basename="/devEcho">
+        <Router basename={import.meta.env.BASE_URL}>
           <ScrollToTop />
           <div className="flex flex-col min-h-screen bg-secondary-50 dark:bg-secondary-900 text-secondary-900 dark:text-gray-50 transition-colors duration-300 animate-fade-in">
             <Navbar />
