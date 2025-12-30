@@ -7,7 +7,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
 
-    base: '/devEcho/',
+    // base: '/devEcho/', removed for dual deployment support
+
 
     server: {
       port: 3000,
